@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pet_app/data/posts_data.dart';
+import 'package:pet_app/entities/post_entity.dart';
 import 'package:pet_app/widgets/custom_app_bar.dart';
+import 'package:pet_app/widgets/post.dart';
 import 'package:pet_app/widgets/stories.dart';
 import 'package:pet_app/widgets/wellcome.dart';
 
@@ -26,7 +29,10 @@ class MyApp extends StatelessWidget {
               SizedBox(
                 height: 16,
               ),
-              Stories()
+              Stories(),
+              ...posts.map((PostEntity post) {
+                return Post(post: post);
+              })
             ],
           ),
         ),
