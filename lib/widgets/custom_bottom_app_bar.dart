@@ -8,41 +8,37 @@ class CustomBottomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: kBottomNavigationBarHeight + 20,
       decoration: BoxDecoration(
+          color: Colors.white,
           boxShadow: [
             BoxShadow(
                 color: ThemeColors.gainsboro,
                 offset: Offset(0, -5),
+                spreadRadius: 2,
                 blurRadius: 20)
           ],
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20), topRight: Radius.circular(20))),
-      child: BottomAppBar(
-        color: Colors.white,
-        shape: CircularNotchedRectangle(),
-        height: 60,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            BottomBarItem(
-                icon: 'assets/icons/home.svg', title: 'Inicio', isActive: true),
-            BottomBarItem(
-                icon: 'assets/icons/search.svg',
-                title: 'Explore',
-                isActive: false),
-            SizedBox(
-              width: 56,
-            ),
-            BottomBarItem(
-                icon: 'assets/icons/bell.svg',
-                title: 'Notificacion',
-                isActive: false),
-            BottomBarItem(
-                icon: 'assets/icons/user.svg',
-                title: 'Usuario',
-                isActive: false),
-          ],
-        ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          BottomBarItem(
+              icon: 'assets/icons/home.svg', title: 'Inicio', isActive: true),
+          BottomBarItem(
+              icon: 'assets/icons/search.svg',
+              title: 'Explore',
+              isActive: false),
+          SizedBox(
+            width: 56,
+          ),
+          BottomBarItem(
+              icon: 'assets/icons/bell.svg',
+              title: 'Notificacion',
+              isActive: false),
+          BottomBarItem(
+              icon: 'assets/icons/user.svg', title: 'Usuario', isActive: false),
+        ],
       ),
     );
   }

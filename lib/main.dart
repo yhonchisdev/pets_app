@@ -1,8 +1,9 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:pet_app/data/posts_data.dart';
 import 'package:pet_app/entities/post_entity.dart';
-import 'package:pet_app/theme/theme.dart';
+import 'package:pet_app/widgets/circular_menu.dart';
+import 'package:pet_app/widgets/circular_menu_item.dart';
 import 'package:pet_app/widgets/custom_app_bar.dart';
 import 'package:pet_app/widgets/custom_bottom_app_bar.dart';
 import 'package:pet_app/widgets/post.dart';
@@ -38,21 +39,30 @@ class MyApp extends StatelessWidget {
               Stories(),
               ...posts.map((PostEntity post) {
                 return Post(post: post);
-              })
+              }),
             ],
           ),
         ),
         bottomNavigationBar: CustomBottomAppBar(),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: ThemeColors.eerieBlack,
-          shape: CircleBorder(),
-          elevation: 0,
-          highlightElevation: 0,
-          child: SvgPicture.asset('assets/icons/plus.svg',
-              width: 20,
-              height: 20,
-              colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn)),
+        floatingActionButton: CircularMenu(
+          assetIcon: 'assets/icons/plus.svg',
+          radius: 60,
+          startingAngleInRadian: 1.25 * pi,
+          endingAngleInRadian: 1.75 * pi,
+          items: [
+            CircularMenuItem(
+              onPressed: () {},
+              assetIcon: 'assets/icons/email.svg',
+            ),
+            CircularMenuItem(
+              onPressed: () {},
+              assetIcon: 'assets/icons/plus.svg',
+            ),
+            CircularMenuItem(
+              onPressed: () {},
+              assetIcon: 'assets/icons/bell.svg',
+            )
+          ],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
