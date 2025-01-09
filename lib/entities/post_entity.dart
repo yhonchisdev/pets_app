@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pet_app/entities/user_story.dart';
+import 'package:pet_app/entities/user_story_entity.dart';
 
 class PostEntity {
   final UserStory story;

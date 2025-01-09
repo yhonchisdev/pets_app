@@ -24,7 +24,7 @@ class CustomBottomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           BottomBarItem(
-              icon: 'assets/icons/home.svg', title: 'Inicio', isActive: true),
+              icon: 'assets/icons/home.svg', title: 'Home', isActive: true),
           BottomBarItem(
               icon: 'assets/icons/search.svg',
               title: 'Explore',
@@ -34,10 +34,10 @@ class CustomBottomAppBar extends StatelessWidget {
           ),
           BottomBarItem(
               icon: 'assets/icons/bell.svg',
-              title: 'Notificacion',
+              title: 'Notification',
               isActive: false),
           BottomBarItem(
-              icon: 'assets/icons/user.svg', title: 'Usuario', isActive: false),
+              icon: 'assets/icons/user.svg', title: 'User', isActive: false),
         ],
       ),
     );

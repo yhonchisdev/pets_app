@@ -1,5 +1,5 @@
 import 'package:pet_app/entities/user_entity.dart';
-import 'package:pet_app/entities/user_story.dart';
+import 'package:pet_app/entities/user_story_entity.dart';
 import 'package:pet_app/theme/theme.dart';
 
 List<UserStory> stories = [

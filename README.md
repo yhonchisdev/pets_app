@@ -45,3 +45,4 @@ flutter run
 ## Captura de Pantalla
 
 ![Captura de Pantalla](./assets/screens/screen-1.png)
+![Captura de Pantalla](./assets/screens/screen-2.png)

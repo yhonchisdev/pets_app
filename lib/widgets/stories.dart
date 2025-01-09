@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/data/stories_data.dart';
-import 'package:pet_app/entities/user_story.dart';
+import 'package:pet_app/entities/user_story_entity.dart';
 import 'package:pet_app/widgets/story.dart';
 
 class Stories extends StatelessWidget {
